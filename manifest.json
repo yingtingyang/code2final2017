@@ -17,7 +17,7 @@
 	},
 
 	 "content_scripts": [ {
-	     "js": [ "jquery.min.js", "run.js" ],
+	     "js": [ "jquery.min.js", "p5.js","p5.dom.js","run.js"],
 	     "matches": [ "http://*/*", "https://*/*"]
      }]
 }

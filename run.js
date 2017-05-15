@@ -66,23 +66,36 @@ setTimeout(function createCanvasOverlay()
     canvasContainer.appendChild(myCanvas);
 
 
-     var imgArray;
-     
-     imgArray = new Array(4);
+    
+},11000);
 
-      for (var i=1; i<imgArray.length; i++){
-            imgArray[i] = loadImage("assets/"+"pic"+ i+ ".jpg");
+var imgArray = [];
+var img;
+
+setTimeout(
+function preload(){
+       imgArray[0] = loadImage('assets/pic1.jpg');
+       imgArray[1] = loadImage('assets/pic2.jpg');
+       imgArray[2] = loadImage('assets/pic3.jpg');
+       imgArray[3] = loadImage('assets/pic4.jpg');
+      // for (var i=1; i<4; i++){
+      //       imgArray[i] = loadImage("assets/pic"+ i+ ".jpg");
             
-            }
-           
+      //       }
+        
+},11000);
 
+setTimeout(
+function draw() {
+	
 
-         for (var i =1; i<imgArray.length; i++){
+	for (var i =1; i<imgArray.length; i++){
                image(imgArray[i], random(Canvas.height/2), 
   	            random(Canvas.width/2));
 
                }
 },11000);
+
 
       function writeMessage(canvas, message) {
         var context = canvas.getContext('2d');
