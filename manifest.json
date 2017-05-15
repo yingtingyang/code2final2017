@@ -1,0 +1,22 @@
+{
+	"manifest_version": 2,
+
+	"name": "Meme it",
+	"description": "Meme this boring website!!",
+	"version": "1.0",
+
+	"permissions": [
+		"tabs",
+		"http://*/*",
+		"https://*/*"
+	],
+
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_title": "Add memes to lighten up your browing experience!"
+	},
+
+	"background": {
+		"scripts": ["run.js"]
+	}
+}
