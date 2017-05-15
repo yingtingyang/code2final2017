@@ -1,8 +1,8 @@
 {
 	"manifest_version": 2,
 
-	"name": "Meme it",
-	"description": "Meme this boring website!!",
+	"name": "Erase & Meme",
+	"description": "Click to erase the website then meme it!",
 	"version": "1.0",
 
 	"permissions": [
@@ -16,7 +16,8 @@
 		"default_title": "Add memes to lighten up your browing experience!"
 	},
 
-	"background": {
-		"scripts": ["run.js"]
-	}
+	 "content_scripts": [ {
+	     "js": [ "jquery.min.js", "run.js" ],
+	     "matches": [ "http://*/*", "https://*/*"]
+     }]
 }

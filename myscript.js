@@ -1,7 +1,7 @@
 
+$(document).ready(function () {
 
-
- //disable links
+  //disable links
 $('body').on('click.myDisable', 'a', function(e) { e.preventDefault(); }); 
 
 //hide elements
@@ -16,13 +16,13 @@ $(document).ready(function(){
         $(this).hide();
     });
 });
+});
+
+ 
 
 // ///**
-//  * Code to create dynamic canvas below all other element in a html page.
+//  
 //  * F. Permadi, 2009
-//  * http://www.permadi.com 
-//  *
-//  * This code is made available for educational purpose comes with no warranty.  Use at your own risk.
 //  *///**
 setTimeout(function createCanvasOverlay()
  {
@@ -62,6 +62,7 @@ setTimeout(function createCanvasOverlay()
  //        context.fillText(message, 10, 25);
  //      },30000);
 
+//create blanck canvas to cover the page
  setTimeout(function getMousePos(canvas, evt) {
         var rect = canvas.getBoundingClientRect();
         return {
@@ -84,8 +85,8 @@ setTimeout(function createCanvasOverlay()
  	   drawing = new Image();
  	   drawing.src = "pic1.jpg";
  	   drawing.onload = function(){
- 	   	context.drawImage(drawing,mousePos.x,mousePos.y);
+ 	   	context.drawImage(drawing,mouseX,mouseY);
  	   };
- 	   }
+ 	  
 
  },30000);
